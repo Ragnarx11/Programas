@@ -1,0 +1,48 @@
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int h1, h2, min1, min2, dif, dif2, cobro, cobro2;
+
+	cout<<"Ingresar horas y despues minutos.\n";
+	cout<<"Ingrese hora de entrada: ";cin>>h1;
+	cout<<"Ingresar minutos de entrada: ";cin>>min1;
+	cout<<"Ingrese la hora de salida: ";cin>>h2;
+	cout<<"Ingresar minutos de salida: ";cin>>min2;
+	
+	dif=(h2-h1);
+	dif2=dif+1;
+	
+	if(dif<=3)
+	{
+		if(min2>min1)
+		{
+			cobro=dif2*15;
+			cout<<"El costo total de estacionamiento es: "<<cobro;
+		}
+		else
+		{
+			cobro2=dif*15;
+			cout<<"El costo total de estacionamiento es: "<<cobro2;
+		}
+	}
+	else
+	{
+		if(min2>min1)
+		{
+			cobro=dif2*25;
+			cout<<"El costo total de estacionamiento es: "<<cobro;
+		}
+		else
+		{
+			cobro2=dif*25;
+			cout<<"El costo total de estacionamiento es: "<<cobro2;
+		}
+	}
+	getch();
+
+}
